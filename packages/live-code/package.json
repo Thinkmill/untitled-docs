@@ -1,0 +1,24 @@
+{
+  "name": "@untitled-docs/live-code",
+  "version": "0.0.0",
+  "main": "dist/live-code.cjs.js",
+  "module": "dist/live-code.esm.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.8.3",
+    "@monaco-editor/react": "^3.0.1",
+    "@types/react": "^16.9.19",
+    "monaco-editor": "^0.19.3"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "csstype": "^2.6.8",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

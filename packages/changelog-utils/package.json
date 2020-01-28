@@ -1,0 +1,18 @@
+{
+  "name": "@untitled-docs/changelog-utils",
+  "version": "0.0.0",
+  "main": "dist/changelog-utils.cjs.js",
+  "module": "dist/changelog-utils.esm.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.9.19",
+    "@types/semver": "^6.2.0",
+    "semver": "^7.1.1"
+  },
+  "devDependencies": {
+    "react": "^16.12.0"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  }
+}

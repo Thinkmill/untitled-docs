@@ -1,0 +1,29 @@
+{
+  "name": "@untitled-docs/repo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@changesets/cli": "^2.5.0",
+    "@manypkg/cli": "^0.9.0",
+    "@preconstruct/cli": "^1.1.4",
+    "csstype": "^2.6.8",
+    "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "preinstall": "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
+    "postinstall": "preconstruct dev && manypkg check"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
