@@ -1,0 +1,11 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@0.3.0/schema.json",
+  "changelog": [
+    "@changesets/changlog-github",
+    { "repo": "Thinkmill/untitled-docs" }
+  ],
+  "commit": false,
+  "linked": [],
+  "access": "public",
+  "baseBranch": "master"
+}
