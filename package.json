@@ -9,7 +9,7 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
-    "@changesets/cli": "^2.5.0",
+    "@changesets/cli": "^2.5.1",
     "@manypkg/cli": "^0.9.0",
     "@preconstruct/cli": "^1.1.4",
     "csstype": "^2.6.8",
