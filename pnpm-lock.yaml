@@ -6,6 +6,7 @@ importers:
       '@babel/preset-env': 7.8.3_@babel+core@7.8.3
       '@babel/preset-react': 7.8.3_@babel+core@7.8.3
       '@babel/preset-typescript': 7.8.3_@babel+core@7.8.3
+      '@changesets/changelog-github': 0.2.1
       '@changesets/cli': 2.5.1
       '@manypkg/cli': 0.9.0
       '@preconstruct/cli': 1.1.4
@@ -19,6 +20,7 @@ importers:
       '@babel/preset-env': ^7.8.3
       '@babel/preset-react': ^7.8.3
       '@babel/preset-typescript': ^7.8.3
+      '@changesets/changelog-github': ^0.2.1
       '@changesets/cli': ^2.5.1
       '@manypkg/cli': ^0.9.0
       '@preconstruct/cli': ^1.1.4
@@ -1801,6 +1803,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qlfzf1akpptamc1DtBdX6KnG6XTMI5dnBd51psmqLGokZGv9R684d4JncRmNrD2w+THp1UQsA8sfgs9+T18OzQ==
+  /@changesets/changelog-github/0.2.1:
+    dependencies:
+      '@changesets/get-github-info': 0.4.1
+      '@changesets/types': 0.4.0
+      dotenv: 8.2.0
+    dev: false
+    resolution:
+      integrity: sha512-9rtct8gcbORJH7fmNhSOCgOyETk8JEoXFIC8PnFrdpQPuweknOORMKrsItfUnuYqRuSf0P13P1HCXgZFqBCPmg==
   /@changesets/cli/2.5.1:
     dependencies:
       '@babel/runtime': 7.8.4
@@ -1850,6 +1860,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9pfp6Kq+h/CXWpgEM4Y2XtxeNCopUDov6NpDIFISHI5Ipg2Jz7cweULleASWVKVi9FwjCqQwIhmREdhgSOozcQ==
+  /@changesets/get-github-info/0.4.1:
+    dependencies:
+      dataloader: 1.4.0
+      node-fetch: 2.6.0
+    dev: false
+    resolution:
+      integrity: sha512-UtBaB7rS2mvEvvsJCpNsR86wLd5dPaupXBCHDdcYY1kDATpLBrvCNj+Qq8HVDQeaYb4BnTOVl7sGjtnzGEMaxQ==
   /@changesets/get-release-plan/0.4.0:
     dependencies:
       '@babel/runtime': 7.8.4
@@ -3664,6 +3681,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-uEUyaDKoSQ1M4Oq8l45hSE26SnTxL6snNnqvK/VWx5wJhmff5z0FUVJDKDanor/6w3kzE3i7XZOk+7wC0EXr1A==
+  /dotenv/8.2.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
   /duplexer/0.1.1:
     dev: false
     resolution:
