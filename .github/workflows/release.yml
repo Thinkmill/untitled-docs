@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: 12.x
 
+      - uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: pnpm-
+
       - name: Install pnpm
         run: curl -L https://unpkg.com/@pnpm/self-installer | node
 
