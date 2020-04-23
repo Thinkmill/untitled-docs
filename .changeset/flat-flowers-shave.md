@@ -6,4 +6,4 @@
 "@untitled-docs/gatsby-source-packages": patch
 ---
 
-Update package.jsons
+Update package.json
