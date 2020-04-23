@@ -1,0 +1,6 @@
+{
+  "main": "dist/gatsby-plugin-package-changelog.cjs.js",
+  "preconstruct": {
+    "source": "../src/gatsby-node"
+  }
+}

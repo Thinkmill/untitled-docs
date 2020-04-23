@@ -1,0 +1,6 @@
+{
+  "main": "dist/gatsby-source-packages.cjs.js",
+  "preconstruct": {
+    "source": "../src/gatsby-node"
+  }
+}
