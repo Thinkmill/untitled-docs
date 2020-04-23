@@ -1,6 +1,6 @@
 {
   "name": "@untitled-docs/gatsby-source-packages",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@manypkg/get-packages": "^1.0.1",
