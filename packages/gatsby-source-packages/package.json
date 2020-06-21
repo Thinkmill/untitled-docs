@@ -14,7 +14,7 @@
   },
   "preconstruct": {
     "entrypoints": [
-      "gatsby-node"
+      "gatsby-node.ts"
     ]
   }
 }

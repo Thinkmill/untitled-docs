@@ -13,8 +13,11 @@
     "@changesets/cli": "^2.5.1",
     "@manypkg/cli": "^0.9.0",
     "@preconstruct/cli": "^1.1.4",
+    "@types/jest": "^26.0.0",
     "@types/react": "^16.9.34",
+    "babel-jest": "^26.0.1",
     "csstype": "^2.6.8",
+    "jest": "^26.0.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "typescript": "^3.7.5"
@@ -23,11 +26,15 @@
     "preinstall": "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
     "postinstall": "preconstruct dev && manypkg check",
     "build": "preconstruct build",
-    "release": "pnpm run build && changeset publish"
+    "release": "pnpm run build && changeset publish",
+    "test": "jest"
   },
   "preconstruct": {
     "packages": [
       "packages/*"
-    ]
+    ],
+    "___experimentalFlags_WILL_CHANGE_IN_PATCH": {
+      "newEntrypoints": true
+    }
   }
 }

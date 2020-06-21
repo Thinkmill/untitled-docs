@@ -1,6 +1,3 @@
 {
-  "main": "dist/gatsby-plugin-package-mdx.cjs.js",
-  "preconstruct": {
-    "source": "../src/gatsby-node"
-  }
+  "main": "dist/gatsby-plugin-package-mdx.cjs.js"
 }
