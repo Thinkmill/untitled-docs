@@ -26,7 +26,7 @@ export function transform(code) {
                   ) {
                     exampleType = "jsx";
                     path.node.body[0] = t.functionExpression(
-                      t.identifier("Element"),
+                      t.identifier("Example"),
                       [],
                       t.blockStatement([
                         t.returnStatement(path.node.body[0].expression),
@@ -36,7 +36,7 @@ export function transform(code) {
                     exampleType = "function";
                     path.node.body = [
                       t.functionExpression(
-                        t.identifier("Element"),
+                        t.identifier("Example"),
                         [],
                         t.blockStatement(path.node.body)
                       ),
