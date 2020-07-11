@@ -86,26 +86,6 @@ importers:
   packages/live-code:
     dependencies:
       '@babel/runtime': 7.9.2
-      '@monaco-editor/react': 3.3.0_c357f251afa8ac9edc6f7499bb141b0d
-      '@types/react': 16.9.34
-      monaco-editor: 0.19.3
-    devDependencies:
-      csstype: 2.6.10
-      prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
-    specifiers:
-      '@babel/runtime': ^7.8.3
-      '@monaco-editor/react': ^3.0.1
-      '@types/react': ^16.9.34
-      csstype: ^2.6.8
-      monaco-editor: ^0.19.3
-      prop-types: ^15.7.2
-      react: ^16.12.0
-      react-dom: ^16.12.0
-  packages/live-code-compiler:
-    dependencies:
-      '@babel/runtime': 7.9.2
       '@babel/standalone': 7.10.3
       unist-util-visit: 2.0.2
     devDependencies:
@@ -137,7 +117,6 @@ importers:
       '@types/react': 16.9.34
       '@types/react-dom': 16.9.6
       '@untitled-docs/live-code': 'link:../packages/live-code'
-      '@untitled-docs/live-code-compiler': 'link:../packages/live-code-compiler'
       next: 9.4.4_react-dom@16.13.1+react@16.13.1
       react: 16.13.1
       react-dom: 16.13.1_react@16.13.1
@@ -148,7 +127,6 @@ importers:
       '@types/react': ^16.9.34
       '@types/react-dom': ^16.9.6
       '@untitled-docs/live-code': ^0.0.0
-      '@untitled-docs/live-code-compiler': 'workspace:^0.0.0'
       next: ^9.4.4
       react: ^16.12.0
       react-dom: ^16.12.0
@@ -2744,20 +2722,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6cDuZeKSCSJ1KvfEQ25Y8OXUjqDJZ+HgUs6dhASWbAX8fxVraTfPsSeRe2bN+4QJDsgUaXaMWBYfRomCr04GGg==
-  /@monaco-editor/react/3.3.0_c357f251afa8ac9edc6f7499bb141b0d:
-    dependencies:
-      monaco-editor: 0.19.3
-      prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
-    dev: false
-    peerDependencies:
-      monaco-editor: ^0.20.0
-      prop-types: ^15.7.2
-      react: ^16.8.6
-      react-dom: ^16.8.6
-    resolution:
-      integrity: sha512-qvmUhgawBk2kwNOmXxIkiMGHsLm9vvVoQNY4So/sdrLVIo0DlFBzeal4wkMe1RV0uK47ziVG0LAXm2gV8ioGdA==
   /@mrmlnc/readdir-enhanced/2.2.1:
     dependencies:
       call-me-maybe: 1.0.1
@@ -11257,10 +11221,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-  /monaco-editor/0.19.3:
-    dev: false
-    resolution:
-      integrity: sha512-2n1vJBVQF2Hhi7+r1mMeYsmlf18hjVb6E0v5SoMZyb4aeOmYPKun+CE3gYpiNA1KEvtSdaDHFBqH9d7Wd9vREg==
   /move-concurrently/1.0.1:
     dependencies:
       aproba: 1.2.0
@@ -13192,6 +13152,7 @@ packages:
       prop-types: 15.7.2
       react: 16.13.1
       scheduler: 0.19.1
+    dev: false
     peerDependencies:
       react: ^16.13.1
     resolution:
@@ -14031,6 +13992,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
     resolution:
       integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
   /schema-utils/0.4.7:

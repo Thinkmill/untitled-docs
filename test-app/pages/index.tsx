@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { useLiveCode } from "@untitled-docs/live-code-compiler";
-import { BabelResult } from "@untitled-docs/live-code-compiler/src/types";
+import React, { useState } from "react";
+import { useLiveCode } from "@untitled-docs/live-code";
+
+let scope = {};
 
 export default () => {
   let [code, setCode] = useState("<div>something</div>");
-  let thing = useLiveCode({ code, initialTransformResult: null, scope: {} });
+  let { element, error } = useLiveCode({
+    code,
+    initialTransformResult: null,
+    scope,
+  });
   return (
     <div>
-      {thing.element}
+      {element}
       <textarea
         onChange={(event) => {
           setCode(event.target.value);
         }}
         value={code}
       />
-      <pre>{thing.error}</pre>
+      <pre>{error}</pre>
     </div>
   );
 };

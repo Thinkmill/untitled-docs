@@ -22,12 +22,6 @@ export class LiveCodeErrorBoundary extends React.Component<
     };
   }
   static getDerivedStateFromError(error: any) {
-    debugger;
-    error._suppressLogging = true;
-    console.log("get derived state from error");
-    // errors.add(error);
-    // error.isThing = true;
-    delete error.stack;
     return { error: error.toString() };
   }
   componentDidUpdate(
@@ -36,13 +30,16 @@ export class LiveCodeErrorBoundary extends React.Component<
   ) {
     if (this.state.error !== undefined) {
       if (this.props.children !== _prevProps.children) {
+        console.log("unset error");
         this.setState({ error: undefined });
       }
 
       if (this.state.error !== prevState.error) {
+        console.log("on error");
         this.props.onError(this.state.error);
       }
     } else if (this.state.lastSafeElement !== this.props.children) {
+      console.log("set safe");
       this.setState({
         lastSafeElement: this.props.children,
       });
@@ -56,8 +53,6 @@ export class LiveCodeErrorBoundary extends React.Component<
       if (this.state.lastSafeElement === this.props.children) {
         return null;
       }
-
-      // if it wasn't the last one we
       return this.state.lastSafeElement;
     }
     return this.props.children;

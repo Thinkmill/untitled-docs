@@ -62,10 +62,6 @@ function useCompiledResult(
   return transformedResult;
 }
 
-// throw new Error(
-//   `An error occurred in a live code example: ${err.toString()}.\n\n\`\`\`\n${code.trim()}\n\`\`\``
-// );
-
 export function useLiveCode({ code, scope, initialTransformResult }: Options) {
   const compiledResult = useCompiledResult(code, initialTransformResult);
 
@@ -82,14 +78,6 @@ export function useLiveCode({ code, scope, initialTransformResult }: Options) {
       return getElement({
         code: compiledResult.lastestSafe.code,
         scope,
-        onError: (error) => {
-          if (typeof window === "undefined") {
-            throw new Error(
-              `An error occurred in a live code example: ${error}.\n\n\`\`\`\n${code.trim()}\n\`\`\``
-            );
-          }
-          setError({ error, result: compiledResult.lastestSafe });
-        },
       });
     }
     return null;
@@ -102,9 +90,7 @@ export function useLiveCode({ code, scope, initialTransformResult }: Options) {
           setError({ error: err, result: compiledResult.lastestSafe });
         }}
       >
-        {compiledResult.lastestSafe === error.result && error.result !== null
-          ? null
-          : element}
+        {element}
       </LiveCodeErrorBoundary>
     ),
     error:

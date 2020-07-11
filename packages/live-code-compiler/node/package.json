@@ -1,4 +1,0 @@
-{
-  "main": "dist/live-code-compiler.cjs.js",
-  "module": "dist/live-code-compiler.esm.js"
-}
