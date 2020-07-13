@@ -7,7 +7,7 @@ export default () => {
   let [code, setCode] = useState("<div>something</div>");
   let { element, error } = useLiveCode({
     code,
-    initialTransformResult: null,
+    initialCompiledResult: null,
     scope,
   });
   return (

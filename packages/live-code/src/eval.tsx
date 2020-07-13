@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import "regenerator-runtime";
 
 const evalCode = (code: string, scope: { [key: string]: any }) => {
   const scopeKeys = Object.keys(scope);

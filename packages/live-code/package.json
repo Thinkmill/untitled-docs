@@ -7,6 +7,7 @@
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@babel/standalone": "7.10.3",
+    "regenerator-runtime": "^0.13.5",
     "unist-util-visit": "^2.0.2"
   },
   "peerDependencies": {
