@@ -1,0 +1,10 @@
+{
+  "name": "@untitled-docs/prettier-worker",
+  "version": "0.0.0",
+  "main": "dist/prettier-worker.cjs.js",
+  "module": "dist/prettier-worker.esm.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.8.3"
+  }
+}
