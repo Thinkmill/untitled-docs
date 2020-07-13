@@ -1,5 +1,12 @@
 # @untitled-docs/test-app
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`55025a9`](https://github.com/Thinkmill/untitled-docs/commit/55025a9ef888036dc7ca6884e2f337a04071e9a0)]:
+  - @untitled-docs/live-code@0.3.0
+
 ## 0.0.2
 
 ### Patch Changes
