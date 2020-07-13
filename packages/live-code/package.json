@@ -1,6 +1,6 @@
 {
   "name": "@untitled-docs/live-code",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/live-code.cjs.js",
   "module": "dist/live-code.esm.js",
   "license": "MIT",
