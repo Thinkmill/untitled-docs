@@ -27,7 +27,8 @@
     "postinstall": "preconstruct dev && manypkg check",
     "build": "preconstruct build",
     "release": "pnpm run build && changeset publish",
-    "test": "jest"
+    "test": "jest",
+    "version": "changeset version && pnpm i --frozen-lockfile=false"
   },
   "preconstruct": {
     "packages": [
