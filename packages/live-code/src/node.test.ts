@@ -13,7 +13,7 @@ test("works for jsx examples", () => {
 `);
   assert(result.status === "success");
   expect(result.code).toMatchInlineSnapshot(`
-    "function Element() {
+    "function Example() {
       return /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(Something, null));
     }"
   `);
@@ -33,10 +33,10 @@ return (
   assert(result.status === "success");
 
   expect(result.code).toMatchInlineSnapshot(`
-      "function Element() {
-        return /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(Something, null));
-      }"
-    `);
+    "function Example() {
+      return /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(Something, null));
+    }"
+  `);
   expect(result.exampleType).toEqual("function");
   expect(result.globals).toEqual(["Something"]);
 });
@@ -55,7 +55,7 @@ return (
   assert(result.status === "success");
 
   expect(result.code).toMatchInlineSnapshot(`
-    "function Element() {
+    "function Example() {
       var something = 'wow';
       return /*#__PURE__*/React.createElement(\\"div\\", null, something, /*#__PURE__*/React.createElement(Something, null));
     }"

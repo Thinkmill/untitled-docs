@@ -1,5 +1,5 @@
 ---
-"@untitled-docs/live-code-compiler": minor
+"@untitled-docs/live-code": minor
 ---
 
 Initial release

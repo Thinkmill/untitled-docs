@@ -1,34 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { createBabelWorker } from "@untitled-docs/live-code-compiler";
-import { BabelResult } from "@untitled-docs/live-code-compiler/src/types";
+import React, { useState } from "react";
+import { useLiveCode } from "@untitled-docs/live-code";
 
-let worker = typeof window !== "undefined" ? createBabelWorker() : undefined;
+let scope = {};
 
 export default () => {
-  let [compiled, setCompiledResult] = useState<
-    BabelResult | { status: "compiling" }
-  >({ status: "compiling" });
-  let [code, setCode] = useState("console.log(1)");
-  useEffect(() => {
-    let shouldUpdate = true;
-    worker!.compile(code).then((result) => {
-      if (shouldUpdate) {
-        setCompiledResult(result);
-      }
-    });
-    return () => {
-      shouldUpdate = false;
-    };
-  }, [code]);
+  let [code, setCode] = useState("<div>something</div>");
+  let { element, error } = useLiveCode({
+    code,
+    initialTransformResult: null,
+    scope,
+  });
   return (
     <div>
+      {element}
       <textarea
         onChange={(event) => {
           setCode(event.target.value);
         }}
         value={code}
       />
-      <pre>{JSON.stringify(compiled, null, 2)}</pre>
+      <pre>{error}</pre>
     </div>
   );
 };

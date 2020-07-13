@@ -1,0 +1,4 @@
+{
+  "main": "dist/live-code.cjs.js",
+  "module": "dist/live-code.esm.js"
+}

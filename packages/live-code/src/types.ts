@@ -1,12 +1,14 @@
 export type ExampleType = "jsx" | "function";
 
+export type SuccessBabelResult = {
+  status: "success";
+  code: string;
+  exampleType: ExampleType;
+  globals: string[];
+};
+
 export type BabelResult =
-  | {
-      status: "success";
-      code: string;
-      exampleType: ExampleType;
-      globals: string[];
-    }
+  | SuccessBabelResult
   | {
       status: "parse-error";
       message: string;
