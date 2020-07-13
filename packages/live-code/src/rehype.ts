@@ -16,9 +16,7 @@ export const plugin = () => {
         }
         let code = node.children[0].value;
 
-        node.properties.initialTransformResult = JSON.stringify(
-          transform(code)
-        );
+        node.properties.initialCompiledResult = JSON.stringify(transform(code));
       }
     });
   };

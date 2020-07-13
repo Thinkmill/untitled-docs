@@ -10,7 +10,7 @@ const worker = typeof window !== "undefined" ? createBabelWorker() : undefined;
 type Options = {
   code: string;
   scope: Record<string, any>;
-  initialTransformResult: null | (() => BabelResult);
+  initialCompiledResult: null | (() => BabelResult);
 };
 
 function useCompiledResult(
@@ -62,8 +62,8 @@ function useCompiledResult(
   return transformedResult;
 }
 
-export function useLiveCode({ code, scope, initialTransformResult }: Options) {
-  const compiledResult = useCompiledResult(code, initialTransformResult);
+export function useLiveCode({ code, scope, initialCompiledResult }: Options) {
+  const compiledResult = useCompiledResult(code, initialCompiledResult);
 
   let [error, setError] = useState<{
     result: BabelResult | null;
@@ -101,6 +101,6 @@ export function useLiveCode({ code, scope, initialTransformResult }: Options) {
         : compiledResult.lastestSafe === error.result
         ? error.error
         : null,
-    compiledResult: compiledResult.latest,
+    latestSuccessfulCompiledResult: compiledResult.lastestSafe,
   };
 }
