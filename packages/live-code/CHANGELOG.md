@@ -1,5 +1,11 @@
 # @untitled-docs/live-code
 
+## 0.3.0
+
+### Minor Changes
+
+- [`55025a9`](https://github.com/Thinkmill/untitled-docs/commit/55025a9ef888036dc7ca6884e2f337a04071e9a0) Thanks [@mitchellhamilton](https://github.com/mitchellhamilton)! - Add regenerator-runtime so that compiled async functions and generators etc. work as expected
+
 ## 0.2.0
 
 ### Minor Changes
