@@ -1,6 +1,7 @@
 {
   "name": "@untitled-docs/prettier-worker",
   "version": "0.0.0",
+  "private": true,
   "main": "dist/prettier-worker.cjs.js",
   "module": "dist/prettier-worker.esm.js",
   "license": "MIT",

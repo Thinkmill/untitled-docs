@@ -99,6 +99,11 @@ importers:
       prop-types: ^15.7.2
       react: ^16.12.0
       unist-util-visit: ^2.0.2
+  packages/prettier-worker:
+    dependencies:
+      '@babel/runtime': 7.9.6
+    specifiers:
+      '@babel/runtime': ^7.8.3
   packages/table-of-contents:
     dependencies:
       '@babel/runtime': 7.9.2
