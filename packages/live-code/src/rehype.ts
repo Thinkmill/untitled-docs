@@ -9,7 +9,12 @@ export const plugin = () => {
         Array.isArray(node.properties.className) &&
         node.properties.className.length === 1 &&
         node.properties.className[0] === "language-jsx" &&
-        node.properties.live
+        // MDX v1
+        (node.properties.live ||
+          // MDX v2
+          (node.data &&
+            typeof node.data.meta === "string" &&
+            node.data.meta.split(" ").includes("live")))
       ) {
         if (node.children.length !== 1 || node.children[0].type !== "text") {
           throw new Error("live code block does not have code");
