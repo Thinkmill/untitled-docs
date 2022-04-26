@@ -1,5 +1,11 @@
 # @untitled-docs/live-code
 
+## 0.4.0
+
+### Minor Changes
+
+- [#8](https://github.com/Thinkmill/untitled-docs/pull/8) [`9346d8a`](https://github.com/Thinkmill/untitled-docs/commit/9346d8ae5e460495c551847970f9716dbf47b2c7) Thanks [@jesstelford](https://github.com/jesstelford)! - Added support for MDX@2 in rehype plugin
+
 ## 0.3.0
 
 ### Minor Changes
