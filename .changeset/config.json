@@ -2,10 +2,12 @@
   "$schema": "https://unpkg.com/@changesets/config@0.3.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "Thinkmill/untitled-docs" }
+    {
+      "repo": "Thinkmill/untitled-docs"
+    }
   ],
   "commit": false,
   "linked": [],
   "access": "public",
-  "baseBranch": "master"
+  "baseBranch": "main"
 }
